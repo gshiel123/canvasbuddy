@@ -1,5 +1,7 @@
 # Canvas Buddy
 
+Currently only designed for MacOS
+
 Watches your Canvas modules and messages you when anything
 changes — including the silent edits Canvas never notifies you about.
 
