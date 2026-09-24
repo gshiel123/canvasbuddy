@@ -1,0 +1,19 @@
+# Raspberry Pi / any systemd Linux box.
+# sudo cp scripts/canvas-buddy.service /etc/systemd/system/
+# sudo systemctl enable --now canvas-buddy
+[Unit]
+Description=Canvas Buddy - watches Canvas courses for changes
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/canvas-buddy
+ExecStart=/home/pi/canvas-buddy/.venv/bin/python -m canvas_buddy.run watch
+Restart=always
+RestartSec=60
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

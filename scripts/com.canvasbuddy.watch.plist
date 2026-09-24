@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.canvasbuddy.watch</string>
+
+  <!-- EDIT THESE TWO PATHS: use `which python3` and `pwd` inside the project. -->
+  <key>ProgramArguments</key>
+  <array>
+    <string>/FULL/PATH/TO/canvas-buddy/.venv/bin/python</string>
+    <string>-m</string>
+    <string>canvas_buddy.run</string>
+    <string>check</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>/FULL/PATH/TO/canvas-buddy</string>
+
+  <!-- Every 45 minutes. launchd fires a missed run when the Mac wakes. -->
+  <key>StartInterval</key>
+  <integer>2700</integer>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>StandardOutPath</key>
+  <string>/tmp/canvas-buddy.log</string>
+  <key>StandardErrorPath</key>
+  <string>/tmp/canvas-buddy.err</string>
+</dict>
+</plist>

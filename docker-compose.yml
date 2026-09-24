@@ -1,0 +1,12 @@
+services:
+  canvas-buddy:
+    build: .
+    # Works on both an Apple-silicon Mac and a Raspberry Pi 5 (both arm64).
+    image: canvas-buddy:latest
+    container_name: canvas-buddy
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      CANVAS_BUDDY_DB: /app/data/state.db
+    volumes:
+      - ./data:/app/data
