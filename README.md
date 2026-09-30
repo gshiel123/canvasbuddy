@@ -10,12 +10,13 @@ Built for Semester 1 2026/27:
 | Course | Canvas ID |
 |---|---|
 | yyyy-xxnnnn — Example Module Name | Canvas ID |
-
-# Changes to be made:
+--- 
+## Changes to be made:
 in directory canvas-buddy > config.py
+```
         line 57 = DEFAULT_COURSES = "CANVASID:MODULEID, ..."
         line 63 = "CANVAS_BASE_URL", "your_canvas_home_link"
-
+```
 ## What it catches
 
 | Watched | New items | Edits |
